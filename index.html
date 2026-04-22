@@ -1,1 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>La Contea di Urbech</title>
 
+  <style>
+    :root {
+      --matrix-green: #00ff41;
+      --matrix-white: #ffffff;
+      --background: #000000;
+      --border: rgba(0, 255, 65, 0.4);
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--matrix-green);
+      font-family: "Courier New", Courier, monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 2.5rem;
+      font-size: 2.2rem;
+      text-shadow: 0 0 10px var(--matrix-green);
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      margin-bottom: 2rem;
+    }
+
+    /* TAB */
+    .tabs {
+      display: flex;
+      gap: 1rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+
+    .tab-button {
+      background: none;
+      border: none;
+      color: var(--matrix-green);
+      font-family: inherit;
+      padding: 0.75rem 1.2rem;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    .tab-button.active {
+      opacity: 1;
+      border-bottom: 2px solid var(--matrix-green);
+      text-shadow: 0 0 6px var(--matrix-green);
+    }
+
+    .tab-content {
+      display: none;
+      width: 90%;
+      max-width: 720px;
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .links a {
+      display: block;
+      padding: 0.8rem;
+      border: 1px solid var(--matrix-green);
+      color: var(--matrix-green);
+      text-decoration: none;
+      text-shadow: 0 0 4px var(--matrix-green);
+      transition: all 0.2s ease;
+    }
+
+    .links a:hover {
+      color: var(--matrix-white);
+      border-color: var(--matrix-white);
+      text-shadow: 0 0 8px var(--matrix-white);
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      margin-bottom: 1.5rem;
+      font-size: 0.75rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Rendete gli onori al Conte di Urbech</h1>
+  <h2>La Matrice osserva. Scegli il tuo accesso.</h2>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="openTab('system', this)">Sistema</button>
+    <button class="tab-button" onclick="openTab('web', this)">Verifica Siti</button>
+    <button class="tab-button" onclick="openTab('phone', this)">Verifica Numeri</button>
+  </div>
+
+  <!-- SISTEMA -->
+  <div id="system" class="tab-content active">
+    <div class="links">
+      https://dash.cloudflare.com/Cloudflare</a>
+      https://github.com/ target="_blank">GitHub</a>
+      https://account.proton.me/switchProton Console</a>
+      https://www.speedtest.net/SpeedTest</a>
+      http://10.0.50.227:8081/
+      http://10.8.0.1:8081/Urbech TCP</a>
+    </div>
+  </div>
+
+  <!-- VERIFICA SITI -->
+  <div id="web" class="tab-content">
+    <div class="links">
+      https://www.scamadviser.com/ScamAdviser</a>
+      https://www.urlvoid.com/URLVoid</a>
+    </div>
+  </div>
+
+  <!-- VERIFICA NUMERI -->
+  <div id="phone" class="tab-content">
+    <div class="links">
+      https://www.tellows.it/Tellows</a>
+      https://it.caller-rating.com/Caller Rating</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    ➜ La Contea di Urbech · Accesso autorizzato
+  </div>
+
+  <script>
+    function openTab(tabId, button) {
+      document.querySelectorAll('.tab-content').forEach(tab =>
+        tab.classList.remove('active')
+      );
+      document.querySelectorAll('.tab-button').forEach(btn =>
+        btn.classList.remove('active')
+      );
+      document.getElementById(tabId).classList.add('active');
+      button.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
