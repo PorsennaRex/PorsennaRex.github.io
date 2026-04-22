@@ -5,66 +5,77 @@
   <title>La Contea di Urbech</title>
 
   <style>
-    /* Stile base Matrix */
+    :root {
+      --matrix-green: #00ff41;
+      --matrix-white: #ffffff;
+      --background: #000000;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background-color: #000;
-      color: #00ff41;
+      background-color: var(--background);
+      color: var(--matrix-green);
       font-family: "Courier New", Courier, monospace;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
     }
 
     h1 {
-      font-size: 2.5rem;
-      text-shadow: 0 0 10px #00ff41;
-      margin-bottom: 1rem;
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
+      text-shadow: 0 0 10px var(--matrix-green);
     }
 
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 2rem;
-      opacity: 0.9;
-    }
-
-    a {
-      color: #00ff41;
-      text-decoration: none;
-      border-bottom: 1px solid #00ff41;
-      padding-bottom: 2px;
-      text-shadow: 0 0 5px #00ff41;
-    }
-
-    a:hover {
-      color: #ffffff;
-      border-bottom-color: #ffffff;
-      text-shadow: 0 0 10px #ffffff;
+      opacity: 0.85;
     }
 
     .links {
-      display: flex;
-      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .links a {
+      display: block;
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--matrix-green);
+      color: var(--matrix-green);
+      text-decoration: none;
+      text-shadow: 0 0 5px var(--matrix-green);
+      transition: all 0.2s ease;
+    }
+
+    .links a:hover {
+      color: var(--matrix-white);
+      border-color: var(--matrix-white);
+      text-shadow: 0 0 10px var(--matrix-white);
+      transform: translateY(-2px);
     }
 
     .footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
+      margin-top: 3rem;
+      font-size: 0.75rem;
       opacity: 0.6;
     }
   </style>
 </head>
 
 <body>
+
   <h1>Rendete gli onori al Conte di Urbech</h1>
   <h2>La Matrice osserva. Scegli il tuo accesso.</h2>
 
-  <div class="links">
+  <nav class="links">
     <a href="https://dash.cloudflare.com/" target="_blank" rel="noopener">
       Cloudflare
     </a>
@@ -74,24 +85,25 @@
     </a>
 
     <a href="https://account.proton.me/switch" target="_blank" rel="noopener">
-      ProtonConsolle
+      Proton Console
     </a>
-    
+
     <a href="https://www.speedtest.net/" target="_blank" rel="noopener">
       SpeedTest
     </a>
 
-  <a href="http://10.0.50.227:8081//" target="_blank" rel="noopener">
+    <a href="http://10.0.50.227:8081/" target="_blank" rel="noopener">
       Gandalf UDP
     </a>
 
-  <a href="http://10.8.0.1:8081/" target="_blank" rel="noopener">
+    <a href="http://10.8.0.1:8081/" target="_blank" rel="noopener">
       Urbech TCP
     </a>
-    
-  </div>
+  </nav>
+
   <div class="footer">
     ➜ La Contea di Urbech · Accesso autorizzato
   </div>
+
 </body>
 </html>
