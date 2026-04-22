@@ -5,125 +5,77 @@
   <title>La Contea di Urbech</title>
 
   <style>
-    :root {
-      --matrix-green: #00ff41;
-      --matrix-white: #ffffff;
-      --background: #000000;
-      --border: rgba(0, 255, 65, 0.4);
-    }
-
+    /* Stile base Matrix */
     body {
       margin: 0;
       padding: 0;
-      background-color: var(--background);
-      color: var(--matrix-green);
+      background-color: #000;
+      color: #00ff41;
       font-family: "Courier New", Courier, monospace;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
       text-align: center;
     }
 
     h1 {
-      margin-top: 3rem;
-      font-size: 2.2rem;
-      text-shadow: 0 0 10px var(--matrix-green);
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #00ff41;
+      margin-bottom: 1rem;
     }
 
     h2 {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      margin-bottom: 3rem;
-      opacity: 0.85;
-    }
-
-    section {
-      width: 90%;
-      max-width: 700px;
-      margin-bottom: 3rem;
-      border: 1px solid var(--border);
-      padding: 1.5rem;
-    }
-
-    section h3 {
-      margin-bottom: 1.5rem;
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
       opacity: 0.9;
     }
 
-    .links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-
-    .links a {
-      display: block;
-      padding: 0.8rem 1rem;
-      border: 1px solid var(--matrix-green);
-      color: var(--matrix-green);
+    a {
+      color: #00ff41;
       text-decoration: none;
-      text-shadow: 0 0 5px var(--matrix-green);
-      transition: all 0.2s ease;
+      border-bottom: 1px solid #00ff41;
+      padding-bottom: 2px;
+      text-shadow: 0 0 5px #00ff41;
     }
 
-    .links a:hover {
-      color: var(--matrix-white);
-      border-color: var(--matrix-white);
-      text-shadow: 0 0 10px var(--matrix-white);
-      transform: translateY(-2px);
+    a:hover {
+      color: #ffffff;
+      border-bottom-color: #ffffff;
+      text-shadow: 0 0 10px #ffffff;
+    }
+
+    .links {
+      display: flex;
+      gap: 2rem;
     }
 
     .footer {
-      margin: 2rem 0;
-      font-size: 0.75rem;
+      position: absolute;
+      bottom: 20px;
+      font-size: 0.8rem;
       opacity: 0.6;
     }
   </style>
 </head>
 
 <body>
-
   <h1>Rendete gli onori al Conte di Urbech</h1>
   <h2>La Matrice osserva. Scegli il tuo accesso.</h2>
 
-  <!-- Sezione Dashboard -->
-  <section>
-    <h3>Accessi di Sistema</h3>
-    <div class="links">
-      https://dash.cloudflare.com/Cloudflare</a>
-      https://github.com/GitHub</a>
-      https://account.proton.me/switchProton Console</a>
-      https://www.speedtest.net/SpeedTest</a>
-      http://10.0.50.227:8081/Gandalf UDP</a>
-      http://10.8.0.1:8081/Urbech TCP</a>
-    </div>
-  </section>
+  <div class="links">
+    https://dash.cloudflare.com/
+      Cloudflare
+    </a>
 
-  <!-- Sezione Verifica Siti -->
-  <section>
-    <h3>Verifica Affidabilità Siti Web</h3>
-    <div class="links">
-      https://www.scamadviser.com/ScamAdviser</a>
-      https://www.urlvoid.com/
-    </div>
-  </section>
-
-  <!-- Sezione Verifica Numeri -->
-  <section>
-    <h3>Verifica Numeri Telefonici</h3>
-    <div class="links">
-      https://www.tellows.it/Tellows</a>
-      https://it.caller-rating.com/Caller Rating</a>
-    </div>
-  </section>
+    https://github.com/
+      GitHub
+    </a>
+  </div>
 
   <div class="footer">
     ➜ La Contea di Urbech · Accesso autorizzato
   </div>
-
 </body>
 </html>
